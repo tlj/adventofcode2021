@@ -1,6 +1,9 @@
 package main
 
-import "testing"
+import (
+	"adventofcode2021/utils"
+	"testing"
+)
 
 func Test_increaseCounter(t *testing.T) {
 	type args struct {
@@ -77,5 +80,27 @@ func Test_increseCounterOnSlidingWindow(t *testing.T) {
 				t.Errorf("increaseCounterOnSlidingWindow() = %v, want %v", got, tt.want)
 			}
 		})
+	}
+}
+
+func Test_part1(t *testing.T) {
+	input, err := utils.LoadInputIntoInts("input.txt")
+	if err != nil {
+		panic(err)
+	}
+	want := 1477
+	if got := part1(input); got != want {
+		t.Errorf("part1() = %v, want %v", got, want)
+	}
+}
+
+func Test_part2(t *testing.T) {
+	input, err := utils.LoadInputIntoInts("input.txt")
+	if err != nil {
+		panic(err)
+	}
+	want := 1523
+	if got := part2(input); got != want {
+		t.Errorf("part1() = %v, want %v", got, want)
 	}
 }

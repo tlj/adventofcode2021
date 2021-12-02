@@ -35,13 +35,19 @@ func increaseCounterOnSlidingWindow(data []int) int {
 	return res
 }
 
+func part1(input []int) int {
+	return increaseCounter(input)
+}
+
+func part2(input []int) int {
+	return increaseCounterOnSlidingWindow(input)
+}
+
 func main() {
 	input, err := utils.LoadInputIntoInts("day01/input.txt")
 	if err != nil {
 		panic(err)
 	}
-	part1 := increaseCounter(input)
-	fmt.Printf("Part1: %d\n", part1)
-	part2 := increaseCounterOnSlidingWindow(input)
-	fmt.Printf("Part2: %d\n", part2)
+	fmt.Printf("Part1: %d\n", part1(input))
+	fmt.Printf("Part2: %d\n", part2(input))
 }

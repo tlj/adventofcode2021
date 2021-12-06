@@ -25,9 +25,9 @@ func sumSlice(data []int) int {
 
 func increaseCounterOnSlidingWindow(data []int) int {
 	res := 0
-	for x := 1; x < len(data) - 2; x++ {
-		nextWindowSum := sumSlice(data[x:x+3])
-		previousWindowSum := sumSlice(data[x-1:x+2])
+	for x := 1; x < len(data)-2; x++ {
+		nextWindowSum := sumSlice(data[x : x+3])
+		previousWindowSum := sumSlice(data[x-1 : x+2])
 		if nextWindowSum > previousWindowSum {
 			res++
 		}
@@ -44,7 +44,7 @@ func part2(input []int) int {
 }
 
 func main() {
-	input, err := utils.LoadInputIntoInts("day01/input.txt")
+	input, err := utils.LoadLinesIntoInts("day01/input.txt")
 	if err != nil {
 		panic(err)
 	}

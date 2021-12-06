@@ -43,7 +43,7 @@ func Test_sumSlice(t *testing.T) {
 		{
 			name: "123",
 			args: args{
-				data: []int{1,2,3},
+				data: []int{1, 2, 3},
 			},
 			want: 6,
 		},
@@ -84,7 +84,7 @@ func Test_increseCounterOnSlidingWindow(t *testing.T) {
 }
 
 func Test_part1(t *testing.T) {
-	input, err := utils.LoadInputIntoInts("input.txt")
+	input, err := utils.LoadLinesIntoInts("input.txt")
 	if err != nil {
 		panic(err)
 	}
@@ -95,7 +95,7 @@ func Test_part1(t *testing.T) {
 }
 
 func Test_part2(t *testing.T) {
-	input, err := utils.LoadInputIntoInts("input.txt")
+	input, err := utils.LoadLinesIntoInts("input.txt")
 	if err != nil {
 		panic(err)
 	}
